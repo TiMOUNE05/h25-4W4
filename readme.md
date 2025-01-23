@@ -3,5 +3,5 @@
 
 Créer une page d'accueil en utilisant le standard BEM et Sass pour reproduire le contenu de maquette.
 Auteur: Yohan Jacques
-### Githyb-page: https://timoune05.github.io/h25-4W4/
+### Github-page: https://timoune05.github.io/h25-4W4/
 
