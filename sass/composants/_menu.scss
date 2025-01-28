@@ -1,10 +1,18 @@
 /* /////////////////////////////////////////// menu principal */
     .menu {
+      flex : 1 1 50%;
+      display : flex;  
+      flex-direction: row;
+      justify-content: flex-end;
+      @media screen and (max-width:$point__rupture) {
+        flex-direction: column;
+      }
+    
       margin: 0;
       padding: 0;
       list-style-type: none;
         &__li {
-          display: inline-block;
+          
         }
         &__a {
             color: #333;
