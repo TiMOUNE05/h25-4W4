@@ -48,10 +48,11 @@ Les composants
 @media screen and (max-width: 700px) {
   .menu {
     flex-direction: column;
-    gap: 6px 0;
   }
 }
 .menu__a {
+  color: #333;
+  text-decoration: none;
   padding: 2px 5px;
 }
 

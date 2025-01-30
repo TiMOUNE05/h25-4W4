@@ -6,7 +6,6 @@
       justify-content: flex-end;
       @media screen and (max-width:$point__rupture) {
         flex-direction: column;
-        gap: 6px 0;
       }
     
       margin: 0;
@@ -16,6 +15,8 @@
           
         }
         &__a {
+            color: #333;
+            text-decoration: none;
             padding : 2px 5px;
         }
       }
