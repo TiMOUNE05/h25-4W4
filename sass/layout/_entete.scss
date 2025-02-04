@@ -22,12 +22,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background-color: #fff9f1;
   
       &__nav {
           display: flex;
           justify-content: flex-end;
           @media screen and (max-width:$point__rupture) {
-              display: none;
+              display: block;
               flex-direction: column;
               height: 30vh; 
               width: 100vw;
@@ -35,7 +36,7 @@
               position: absolute;
               top: 0;
               right: 0;
-              background-color: #fff;
+              background-color: #fff0df;
           }
           flex-direction: row; 
           align-items: center;
