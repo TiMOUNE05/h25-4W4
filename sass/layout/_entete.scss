@@ -5,8 +5,12 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      z-index: 99;
+      z-index: 98;
     }
+  }
+
+  .entete__logo{
+    z-index: 99;
   }
   
   .chk__burger{
@@ -17,6 +21,9 @@
       display: flex;
   }
   
+  .entete__menu{
+    text-align: center;
+  }
   
   .entete{
       display: flex;
@@ -25,19 +32,24 @@
       background-color: #fff9f1;
   
       &__nav {
-          display: flex;
-          justify-content: flex-end;
-          @media screen and (max-width:$point__rupture) {
-              display: block;
-              flex-direction: column;
-              height: 30vh; 
-              width: 100vw;
-              gap: 30px 0;
-              position: absolute;
-              top: 0;
-              right: 0;
-              background-color: #fff0df;
-          }
+        display: flex;
+        justify-content: flex-end;
+        position: static;
+
+        @media  screen and (max-width:$point__rupture) {
+            display: none;
+            flex-direction: column;
+            height: 50vh;
+            width: 100vw;
+            gap: 30px 0;
+            padding-bottom: 20px;
+            gap: 30px 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #fff9f1;
+        }
+
           flex-direction: row; 
           align-items: center;
           gap: 0 40px;
