@@ -1,16 +1,16 @@
 @charset "UTF-8";
 /*
-Theme Name: 4W4 - Eddy Martin
-Theme URI: https://referenced.ca
+Theme Name: 4W4 - Johnny Tan
+Theme URI: https://github.com/BestExplosion
 Author: Eddy Martin
-Author URI: https://github.com/eddytuto
+Author URI: https://github.com/BestExplosion
 Description: Thème de base développer dans le cadre du cours 4W4
 Version: 1.0
 Tested up to: 6.2
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: 4w4-eddy
+Text Domain: 4w4-johnny
 */
 /* /////////////////////
 Les Variables
@@ -18,6 +18,14 @@ Les Variables
 /* /////////////////////
 Bases
 //////////////////////// */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-weight: bold;
+}
+
 a {
   color: #5a5;
   text-decoration: none;
@@ -48,10 +56,15 @@ Les composants
 @media screen and (max-width: 700px) {
   .menu {
     flex-direction: column;
-    gap: 6px 0;
+    gap: 20px 0;
   }
 }
 .menu__a {
+  padding: 2px 5px;
+  font-family: system-ui;
+}
+
+.menu-item a {
   padding: 2px 5px;
 }
 
@@ -62,9 +75,8 @@ Le composant .carte
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;
-}
-.carte--grande {
-  padding: 40px;
+  flex: 1 1 220px .carte --grande;
+  flex-padding: 40px;
 }
 .carte--petite {
   padding: 20px;
@@ -114,23 +126,33 @@ Le composant .carte
   border-right: 1px dotted rgba(0, 0, 0, 0.2);
 }
 .recherche__input:hover {
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .recherche__img {
   flex: 0 0 20px;
   padding: 0 3px;
 }
+.recherche .recherche__input::-moz-placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
+.recherche .recherche__input::placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
+@media screen and (max-width: 800px) {
+  .recherche {
+    display: none;
+  }
+}
 
 /* /////////////////////////
-Layout 
+Layout
 /////////////////////////// */
 .global {
-  margin: 0 5%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
+  padding: 10vh 2vw;
 }
 
 .hero {
@@ -138,10 +160,111 @@ Layout
   background-image: url("images/maldives.jpg");
 }
 
-.hero__bouton {
-  background-color: aqua;
+.hero__titre {
+  text-shadow: 3px 3px 5px rgb(41, 155, 102);
 }
 
+.hero__bouton {
+  background-color: rgb(129, 243, 237);
+  border: 2px solid cyan;
+  padding: 10px 20px;
+  color: black;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero__icone-app {
+  margin-top: 10px;
+}
+
+.boiteflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.formulaire {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.495);
+  width: 75vw;
+  height: auto;
+  min-height: 100px;
+  bottom: 5vh;
+  padding: 10px;
+}
+
+.form__formulaire,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+form {
+  flex-wrap: wrap;
+}
+
+.formulaire__input,
+.formulaire__button {
+  border: 2px solid #31bcfd;
+}
+
+.formulaire__input {
+  height: 2rem;
+}
+
+.formulaire__button {
+  width: 150px;
+  height: 2.5rem;
+  margin-top: 18px;
+}
+
+.galerie {
+  display: flex;
+  flex-direction: column;
+}
+
+.galerie__img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.galerie__destinations {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.galerie__fig {
+  width: 300px;
+  height: 300px;
+  padding: 2px;
+  margin: 2px;
+  position: relative;
+}
+
+.galerie h2 {
+  margin-left: 120px;
+}
+
+@media screen and (max-width: 800px) {
+  .formulaire {
+    display: none;
+  }
+  .galerie {
+    display: none;
+  }
+}
 .burger {
   display: none;
 }
@@ -171,6 +294,7 @@ Layout
 .entete__nav {
   display: flex;
   justify-content: flex-end;
+  position: static;
   flex-direction: row;
   align-items: center;
   gap: 0 40px;
@@ -180,8 +304,10 @@ Layout
   .entete__nav {
     display: none;
     flex-direction: column;
-    height: 30vh;
+    height: 50vh;
     width: 100vw;
+    gap: 30px 0;
+    padding-bottom: 20px;
     gap: 30px 0;
     position: absolute;
     top: 0;

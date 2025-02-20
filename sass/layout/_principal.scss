@@ -1,18 +1,115 @@
 .global {
-   margin : 0 5%;
-   max-width: 1000px;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   gap: 20px;
+    padding: 10vh 2vw;
 }
 
 .hero{
     min-height: 100vh;
     background-image: url("images/maldives.jpg");
-
 }
 
-.hero__bouton{
-    background-color:aqua;
+.hero__titre{
+    text-shadow: 3px 3px 5px rgba(41, 155, 102,);
 }
+
+.hero__bouton {
+    background-color: rgb(129, 243, 237); 
+    border: 2px solid cyan;
+    padding: 10px 20px; 
+    color: black; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+.hero__icone-app{
+    margin-top: 10px;
+}
+
+.boiteflex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.formulaire{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.495);
+    width: 75vw;
+    height: auto;  
+    min-height: 100px;  
+    bottom: 5vh;
+    padding: 10px;  
+}
+
+.form__formulaire,
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+form {
+    flex-wrap: wrap;
+}
+
+.formulaire__input,
+.formulaire__button {
+    border: 2px solid #31bcfd;
+}
+.formulaire__input{
+    height: 2rem;
+}
+
+.formulaire__button{
+    width: 150px;
+    height: 2.5rem;
+    margin-top: 18px;
+}
+
+.galerie {
+    display: flex;
+    flex-direction: column;
+}
+
+.galerie__img {
+    width: 100%; 
+    height: 100%; 
+    padding: 0;
+    margin: 0;
+}
+
+.galerie__destinations {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.galerie__fig {
+    width: 300px;  
+    height: 300px; 
+    padding: 2px;
+    margin: 2px;
+    position: relative; 
+}
+
+.galerie h2 {
+    margin-left: 120px;  
+}
+
+
+// Version mobile
+@media screen and (max-width:800px){
+    .formulaire{
+        display: none;
+    }
+    .galerie{
+        display: none;
+    }
+}
+

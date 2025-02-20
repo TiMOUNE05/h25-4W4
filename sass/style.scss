@@ -1,15 +1,15 @@
 /*
-Theme Name: 4W4 - Eddy Martin
-Theme URI: https://referenced.ca
+Theme Name: 4W4 - Johnny Tan
+Theme URI: https://github.com/BestExplosion
 Author: Eddy Martin
-Author URI: https://github.com/eddytuto
+Author URI: https://github.com/BestExplosion
 Description: Thème de base développer dans le cadre du cours 4W4
 Version: 1.0
 Tested up to: 6.2
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: 4w4-eddy
+Text Domain: 4w4-johnny
 */
 
 /* /////////////////////
@@ -21,8 +21,8 @@ Les Variables
 /* /////////////////////
 Bases
 //////////////////////// */
-@import "base/lien";
 @import "base/simple";
+@import "base/lien";
 
 /* /////////////////////////
 Les composants
@@ -31,8 +31,9 @@ Les composants
 @import "composants/carte";
 @import "composants/recherche";
 
+
 /* /////////////////////////
-Layout 
+Layout
 /////////////////////////// */
 @import "layout/principal";
 @import "layout/entete";
