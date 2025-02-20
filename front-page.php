@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * modèle front-page.php permet d'afficher la pae d'acceuil
+ * modèle front-page.php permet d'afficher la page d'acceuil
  * 
  */
 ?>
