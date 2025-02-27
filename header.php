@@ -12,7 +12,9 @@
     <header>
         <div class="entete">
             <figure class="entete__logo">
-                <img src="<?php echo get_template_directory_uri() . '/images/logo.png' ?>" width="80" height="80">
+            <?php
+                if (function_exists('the_custom_logo')) {the_custom_logo();}
+                ?>
             </figure>
             <label for="chk__burger" class="burger">
                 <img src="https://s2.svgbox.net/hero-solid.svg?ic=menu&color=000" width="32" height="32">

@@ -132,11 +132,6 @@ Le composant .carte
   flex: 0 0 20px;
   padding: 0 3px;
 }
-.recherche .recherche__input::-moz-placeholder {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  font-style: italic;
-}
 .recherche .recherche__input::placeholder {
   font-family: "Arial", sans-serif;
   font-size: 16px;
@@ -286,10 +281,40 @@ form {
   display: flex;
 }
 
+.burger {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 98;
+  }
+}
+
+.entete__logo {
+  z-index: 99;
+}
+
+.chk__burger {
+  display: none;
+}
+
+.chk__burger:checked ~ .entete__nav {
+  display: flex;
+}
+
+.entete__menu {
+  text-align: center;
+}
+
 .entete {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff9f1;
 }
 .entete__nav {
   display: flex;
@@ -299,6 +324,7 @@ form {
   align-items: center;
   gap: 0 40px;
   flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
 }
 @media screen and (max-width: 700px) {
   .entete__nav {
@@ -312,6 +338,37 @@ form {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #fff;
+    background-color: #fff9f1;
   }
+}
+
+/*
+  --------------------------------- Layout du pied de page
+*/
+footer {
+  background-color: rgb(236, 136, 13);
+  color: #000;
+}
+
+.piedpage {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.piedpage__s1__externe {
+  flex: 0 0 20%;
+}
+.piedpage__s1__externe .menu {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1__adresse {
+  flex: 0 0 40%;
+}
+.piedpage__s1__description {
+  flex: 1 0 400px;
 }/*# sourceMappingURL=style.css.map */
