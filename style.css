@@ -75,8 +75,10 @@ Le composant .carte
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;
-  flex: 1 1 220px .carte --grande;
-  flex-padding: 40px;
+  flex: 1 1 330px;
+}
+.carte--grande {
+  padding: 40px;
 }
 .carte--petite {
   padding: 20px;
@@ -115,6 +117,7 @@ Le composant .carte
   display: flex;
   align-items: center;
   font-size: 1.2rem;
+  gap: 0rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .recherche__input {
@@ -352,7 +355,7 @@ footer {
 
 .piedpage {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .piedpage__s1 {
   display: flex;
@@ -371,4 +374,8 @@ footer {
 }
 .piedpage__s1__description {
   flex: 1 0 400px;
+}
+
+.recherche {
+  width: 30vh;
 }/*# sourceMappingURL=style.css.map */

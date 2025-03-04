@@ -9,7 +9,7 @@ footer{
   
   .piedpage{
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       &__s1{
           display: flex;
           flex-wrap: wrap;
@@ -33,3 +33,7 @@ footer{
           }
       }
   }
+
+  .recherche{
+    width: 30vh;
+  } 
