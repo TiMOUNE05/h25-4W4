@@ -27,7 +27,7 @@ p {
 }
 
 a {
-  color: #5a5;
+  color: rgb(129, 243, 237);
   text-decoration: none;
 }
 a:hover {
@@ -167,7 +167,7 @@ Layout
 }
 
 .hero__titre {
-  text-shadow: 3px 3px 5px rgb(41, 155, 102);
+  text-shadow: 3px 3px 5px rgb(129, 243, 237);
 }
 
 .hero__bouton {
@@ -325,7 +325,7 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff9f1;
+  background-color: #fff3e2;
 }
 .entete__nav {
   display: flex;
@@ -357,7 +357,7 @@ form {
   --------------------------------- Layout du pied de page
 */
 footer {
-  background-color: rgb(236, 136, 13);
+  background-color: #fff3e2;
   color: #000;
 }
 
