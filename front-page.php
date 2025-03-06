@@ -100,7 +100,7 @@
     <section class="populaire">
         <div class="boiteflex global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); 
-            if (in_category("galerie"))  {
+            if (in_category("category"))  {
                 the_content() ;
             } else {    ?>
                 <?php get_template_part( 'gabarits/carte' ); ?>
