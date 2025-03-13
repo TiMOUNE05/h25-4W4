@@ -75,7 +75,9 @@ Le composant .carte
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;
-  flex: 1 1 330px;
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: row;
 }
 .carte--grande {
   padding: 40px;
@@ -159,6 +161,11 @@ Layout
 /////////////////////////// */
 .global {
   padding: 10vh 2vw;
+}
+
+.populaire > .global {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .hero {

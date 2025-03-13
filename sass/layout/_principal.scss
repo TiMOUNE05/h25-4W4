@@ -2,6 +2,11 @@
     padding: 10vh 2vw;
 }
 
+.populaire > .global {
+    display : flex;
+    flex-wrap:wrap;
+}
+
 .hero{
     min-height: 100vh;
     background-repeat: no-repeat;
