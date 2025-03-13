@@ -58,13 +58,13 @@ $wp_customize->add_control('footer_mission', array(
 //////////////////////////////////////////couleur du texte de la zone hero//////////////////////////////////////////
 
 
-$wp_customize->add_setting('hero_couleur', array(
+$wp_customize->add_setting('hero_icone', array(
   'default' => '',
   'sanitize_callback' => 'esc_url_raw',
 ));
 
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_couleur', array(
-  'label' => __('couleur du texte', 'theme_31w'),
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_icone', array(
+  'label' => __('Couleur du texte', 'theme_31w'),
   'section' => 'hero_section',
 )));
 
