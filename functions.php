@@ -21,6 +21,19 @@ $wp_customize->add_control('hero_auteur', array(
   'type' => 'text',
 ));
 
+//////////////////////////////////////////courriel//////////////////////////////////////////
+
+$wp_customize->add_setting('hero_courriel', array(
+  'default' => __('e2257410@cmaisonneuve.qc.ca', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('hero_courriel', array(
+  'label' => __('Courriel', 'theme_31w'),
+  'section' => 'hero_section',
+  'type' => 'text',
+));
+
 
 //////////////////////////////////////////image en background//////////////////////////////////////////
 
@@ -55,7 +68,33 @@ $wp_customize->add_control('footer_mission', array(
   'type' => 'text',
 ));
 
-//////////////////////////////////////////couleur du texte de la zone hero//////////////////////////////////////////
+//////////////////////////////////////////Adresse//////////////////////////////////////////
+
+$wp_customize->add_setting('footer_adresse', array(
+  'default' => __('Adresse', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('footer_adresse', array(
+  'label' => __('Adresse', 'theme_31w'),
+  'section' => 'footer_section',
+  'type' => 'text',
+));
+
+//////////////////////////////////////////Téléphone//////////////////////////////////////////
+
+$wp_customize->add_setting('footer_telephone', array(
+  'default' => __('telephone', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('footer_telephone', array(
+  'label' => __('telephone', 'theme_31w'),
+  'section' => 'footer_section',
+  'type' => 'text',
+));
+
+//////////////////////////////////////////couleur de l'icone de la zone hero//////////////////////////////////////////
 
 
 $wp_customize->add_setting('hero_icone', array(
@@ -64,6 +103,19 @@ $wp_customize->add_setting('hero_icone', array(
 ));
 
 $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_icone', array(
+  'label' => __('Couleur icone', 'theme_31w'),
+  'section' => 'hero_section',
+)));
+
+//////////////////////////////////////////couleur du texte de la zone hero//////////////////////////////////////////
+
+
+$wp_customize->add_setting('hero_texte', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_texte', array(
   'label' => __('Couleur du texte', 'theme_31w'),
   'section' => 'hero_section',
 )));
