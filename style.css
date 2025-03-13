@@ -163,7 +163,7 @@ Layout
 
 .hero {
   min-height: 100vh;
-  background-image: url("images/maldives.jpg");
+  background-repeat: no-repeat;
 }
 
 .hero__titre {

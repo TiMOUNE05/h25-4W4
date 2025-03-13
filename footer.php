@@ -1,4 +1,6 @@
 <footer>
+    <?php $footer_mission = get_theme_mod('footer_mission', 'Default Title'); ?>
+   
     <div class="piedpage global">
         <section class="piedpage__s1">
         <div class="piedpage__s1__externe">
@@ -19,7 +21,7 @@
             </div>
             <div class="piedpage__s1__description">
                 <h3>Mission du club</h3>
-                Notre mission est de créer des expériences de voyage inoubliables et accessibles à tous, en encourageant la découverte de nouvelles cultures, l'exploration de destinations variées, et la création de liens solides entre les membres. En offrant des voyages organisés, personnalisés et de qualité, nous visons à rendre chaque aventure plus qu'un simple déplacement : une véritable immersion dans le monde.
+               <?php echo $footer_mission ?>
             </div>
         </section>
         <section class="piedpage__s2">

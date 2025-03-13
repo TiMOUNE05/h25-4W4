@@ -6,7 +6,6 @@
  */
 ?>
 
-
 <?php get_header() ?>
 <?php get_template_part( 'gabarits/hero' ); ?>
     <section class="form__formulaire">
