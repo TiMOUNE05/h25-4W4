@@ -239,6 +239,7 @@ form {
 
 .formulaire__input {
   height: 2rem;
+  background-color: #7bf6ff;
 }
 
 .formulaire__button {
