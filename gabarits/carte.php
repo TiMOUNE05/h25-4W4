@@ -21,6 +21,7 @@
     <a class="carte__bouton carte__bouton--actif" href="<?php the_permalink() ?>">suite ...</a>
     <?php the_category(); ?>
     <p>Température maximum&nbsp;<?php echo the_field('temperature_maximum'); ?> &#x00B0;C</p>
-    <p>Température minimum&nbsp;<?php echo the_field('temperature_maximum'); ?> &#x00B0;C</p>
+    <p>Température minimum&nbsp;<?php echo the_field('temperature_minimum'); ?> &#x00B0;C</p>
+    <p>Note:&nbsp;<?php echo the_field('note'); ?> </p>
   </div>
 </article>

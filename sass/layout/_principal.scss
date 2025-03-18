@@ -13,14 +13,20 @@
 }
 
 .hero__titre{
-    text-shadow: 3px 3px 5px rgb(129, 243, 237);;
+    text-shadow: 3px 3px 5px rgb(129, 243, 237);
+    font-size: 4rem;
+}
+
+.hero p{
+    font-size: 2rem;
+    text-shadow: 3px 3px 5px rgb(35, 236, 226);
 }
 
 .hero__bouton {
     background-color: rgb(129, 243, 237); 
     border: 2px solid cyan;
     padding: 10px 20px; 
-    color: black; 
+    color: rgb(255, 255, 255); 
     font-size: 16px; 
     border-radius: 5px; 
     cursor: pointer; 
@@ -49,6 +55,7 @@
     min-height: 100px;  
     bottom: 5vh;
     padding: 10px;  
+    border-radius: 30px;
 }
 
 .form__formulaire,
@@ -65,7 +72,7 @@ form {
 
 .formulaire__input,
 .formulaire__button {
-    border: 2px solid #31bcfd;
+    border: 2px solid #00e6f7;
 }
 .formulaire__input{
     height: 2rem;
@@ -107,6 +114,7 @@ form {
 .galerie h2 {
     margin-left: 120px;  
 }
+
 
 
 // Version mobile

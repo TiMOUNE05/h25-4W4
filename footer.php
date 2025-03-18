@@ -8,6 +8,7 @@
     <div class="piedpage global">
         <section class="piedpage__s1">
         <div class="piedpage__s1__externe">
+            <h3>Site de référence</h3>
                 <?php wp_nav_menu(array(
                     "menu" => "externe",
                     "container" => "nav",

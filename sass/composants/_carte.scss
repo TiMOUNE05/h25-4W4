@@ -9,6 +9,7 @@ Le composant .carte
     flex: 1 1 200px;
     display: flex;
     flex-direction: row;
+    background-color: #fff3e2;
     
   
     &--grande {
@@ -38,14 +39,14 @@ Le composant .carte
   
     &__bouton {
       padding: 10px 20px;
-      background-color: #007bff;
+      background-color: #00e6f7;
       color: #fff;
       border: none;
       border-radius: 4px;
       cursor: pointer;
   
       &--actif {
-        background-color: #0056b3;
+        background-color: #00e6f7;
       }
   
       &:hover {
