@@ -30,10 +30,7 @@
             </div>
         </section>
         <section class="piedpage__s2">
-        <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
+             <?php get_template_part( 'gabarits/icone' ); ?>
         </section>
         <section class="piedpage__s3">
         <?php wp_nav_menu(array(
