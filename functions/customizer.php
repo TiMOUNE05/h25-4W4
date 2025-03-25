@@ -119,16 +119,36 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_t
   'section' => 'hero_section',
 )));
 
-//////////////////////////////////////////404//////////////////////////////////////////
+//////////////////////////////////////////erreur section//////////////////////////////////////////
 
-$wp_customize->add_setting('hero_404', array(
+$wp_customize->add_section('erreur_section', array(
+  'title' => __('Section page 404', 'theme_31w'),
+  'priority' => 30,
+));
+
+//////////////////////////////////////////section message//////////////////////////////////////////
+
+$wp_customize->add_setting('erreur_message', array(
   'default' => __('Message erreur', 'theme_31w'),
   'sanitize_callback' => 'sanitize_text_field'
 ));
 
-$wp_customize->add_control('hero_404', array(
+$wp_customize->add_control('erreur_message', array(
   'label' => __('Message erreur', 'theme_31w'),
-  'section' => 'hero_section',
+  'section' => 'erreur_section',
+  'type' => 'text-area',
+));
+
+//////////////////////////////////////////section message//////////////////////////////////////////
+
+$wp_customize->add_setting('erreur_titre', array(
+  'default' => __('Titre erreur', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('erreur_titre', array(
+  'label' => __('Titre erreur', 'theme_31w'),
+  'section' => 'erreur_section',
   'type' => 'text-area',
 ));
 
