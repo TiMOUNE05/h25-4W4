@@ -119,7 +119,24 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_t
   'section' => 'hero_section',
 )));
 
+//////////////////////////////////////////404//////////////////////////////////////////
+
+$wp_customize->add_setting('hero_404', array(
+  'default' => __('Message erreur', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+
+$wp_customize->add_control('hero_404', array(
+  'label' => __('Message erreur', 'theme_31w'),
+  'section' => 'hero_section',
+  'type' => 'text-area',
+));
+
 }
 
 add_action('customize_register', 'theme_31w_customize_register');
+
+
 ?>
+
+
