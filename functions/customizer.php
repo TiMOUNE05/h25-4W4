@@ -64,7 +64,7 @@ $wp_customize->add_setting('footer_mission', array(
 $wp_customize->add_control('footer_mission', array(
   'label' => __('Mssion', 'theme_31w'),
   'section' => 'footer_section',
-  'type' => 'text',
+  'type' => 'text-area',
 ));
 
 //////////////////////////////////////////Adresse//////////////////////////////////////////
