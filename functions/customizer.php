@@ -126,7 +126,7 @@ $wp_customize->add_section('erreur_section', array(
   'priority' => 30,
 ));
 
-//////////////////////////////////////////section message//////////////////////////////////////////
+//////////////////////////////////////////erreur message//////////////////////////////////////////
 
 $wp_customize->add_setting('erreur_message', array(
   'default' => __('Message erreur', 'theme_31w'),
@@ -139,7 +139,7 @@ $wp_customize->add_control('erreur_message', array(
   'type' => 'text-area',
 ));
 
-//////////////////////////////////////////section message//////////////////////////////////////////
+//////////////////////////////////////////erreur titre//////////////////////////////////////////
 
 $wp_customize->add_setting('erreur_titre', array(
   'default' => __('Titre erreur', 'theme_31w'),
@@ -151,6 +151,19 @@ $wp_customize->add_control('erreur_titre', array(
   'section' => 'erreur_section',
   'type' => 'text-area',
 ));
+//////////////////////////////////////////erreur image//////////////////////////////////////////
+
+
+$wp_customize->add_setting('erreur_img', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur_img', array(
+  'label' => __('image erreur', 'theme_31w'),
+  'section' => 'erreur_section',
+)));
+  
 
 }
 
