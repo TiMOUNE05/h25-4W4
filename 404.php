@@ -27,7 +27,7 @@ $erreur_background = get_theme_mod('erreur_background', 'Default Title');
 
     <div class="erreur_boutonCarte"> 
     <?php if (have_posts()) : while (have_posts()) : the_post(); 
-        if (in_category("populaire")) : ?>
+        if (in_category("erreur")) : ?>
             <?php get_template_part( 'gabarits/carteErreur' ); ?>
         <?php endif;
     endwhile; endif; ?>
