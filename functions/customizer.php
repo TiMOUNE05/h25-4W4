@@ -163,6 +163,20 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur
   'label' => __('image erreur', 'theme_31w'),
   'section' => 'erreur_section',
 )));
+
+//////////////////////////////////////////erreur image en background//////////////////////////////////////////
+
+
+$wp_customize->add_setting('erreur_background', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur_background', array(
+  'label' => __('Page erreur image en background', 'theme_31w'),
+  'section' => 'erreur_section',
+)));
+  
   
 
 }
