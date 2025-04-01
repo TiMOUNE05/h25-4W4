@@ -31,3 +31,44 @@
         display: none;
     }
 }
+
+.erreur_recherche .recherche{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    width: 50vh;
+    margin-bottom: 5vh;
+    font-size: 5em;
+    height: auto;
+    border-bottom: 5px solid yellow;
+    &__input{
+        flex: 1;
+        border: none;
+        outline: none;
+        background-color: rgba(0, 0, 0, 0);
+        &:hover{
+            background-color: rgba(0, 0, 0, 0);
+        }
+        border-right : 1px dotted rgba(0, 0, 0, 0)
+    }
+
+    &__img{
+        display: none;
+        flex: 0 0 20px;
+        padding: 0 3px;
+       
+    }
+
+    .recherche__bouton{
+        display: none;
+    }
+
+    .recherche__input::placeholder {
+        font-family: 'Arial', sans-serif;
+        font-size: 5em;    
+        font-style: italic;  
+        color: yellow;
+        
+    }
+}
+

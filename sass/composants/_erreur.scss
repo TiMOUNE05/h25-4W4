@@ -1,19 +1,13 @@
 .erreur_titre{
-    text-shadow: 3px 3px 5px rgb(129, 243, 237);
+   /* text-shadow: 3px 3px 5px rgb(129, 243, 237);*/
     font-size: 4rem;
 }
 
 .erreur_message{
-    text-shadow: 3px 3px 5px rgb(129, 243, 237);
+    /*text-shadow: 3px 3px 5px rgb(129, 243, 237);*/
     font-size: 2rem;
 }
 
-.erreur_recherche{
-    margin-top: 5vh;
-    form{
-    width: 80vh;
-    }
-}
 
 .erreur_global{
     display: flex;
@@ -23,11 +17,17 @@
     align-items: center;
 }
 
+
 .erreur_carte{
     width: 25vh;
-    border-radius: 5vh;
+    /*border-radius: 5vh;*/
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    background-color: yellow;
+    color: black;
+}
+
+.erreur_carte a{
+    color: black;
 }
 
 .erreur_boutonCarte{
@@ -37,7 +37,19 @@
   flex-wrap: wrap;
   gap: 5vh;
   justify-content: space-between;
-  @media  screen and (max-width:1130px) {
+  /*@media  screen and (max-width:1130px) {
     flex-direction: column;
+}*/
 }
+
+.erreur_boutonAccueil a{
+    font-size: 2em;
+    color: rgb(0, 125, 197);
+    padding: 10px;
+    /*border-radius: 5vh;*/
+    text-align: center;
+    background-color:yellow;
 }
+
+
+

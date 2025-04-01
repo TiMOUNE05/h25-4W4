@@ -158,21 +158,49 @@ Le composant .carte
   }
 }
 
+.erreur_recherche .recherche {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  width: 50vh;
+  margin-bottom: 5vh;
+  font-size: 5em;
+  height: auto;
+  border-bottom: 5px solid yellow;
+}
+.erreur_recherche .recherche__input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-right: 1px dotted rgba(0, 0, 0, 0);
+}
+.erreur_recherche .recherche__input:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.erreur_recherche .recherche__img {
+  display: none;
+  flex: 0 0 20px;
+  padding: 0 3px;
+}
+.erreur_recherche .recherche .recherche__bouton {
+  display: none;
+}
+.erreur_recherche .recherche .recherche__input::placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 5em;
+  font-style: italic;
+  color: yellow;
+}
+
 .erreur_titre {
-  text-shadow: 3px 3px 5px rgb(129, 243, 237);
+  /* text-shadow: 3px 3px 5px rgb(129, 243, 237);*/
   font-size: 4rem;
 }
 
 .erreur_message {
-  text-shadow: 3px 3px 5px rgb(129, 243, 237);
+  /*text-shadow: 3px 3px 5px rgb(129, 243, 237);*/
   font-size: 2rem;
-}
-
-.erreur_recherche {
-  margin-top: 5vh;
-}
-.erreur_recherche form {
-  width: 80vh;
 }
 
 .erreur_global {
@@ -185,9 +213,14 @@ Le composant .carte
 
 .erreur_carte {
   width: 25vh;
-  border-radius: 5vh;
+  /*border-radius: 5vh;*/
   text-align: center;
-  background-color: rgb(255, 255, 255);
+  background-color: yellow;
+  color: black;
+}
+
+.erreur_carte a {
+  color: black;
 }
 
 .erreur_boutonCarte {
@@ -197,11 +230,18 @@ Le composant .carte
   flex-wrap: wrap;
   gap: 5vh;
   justify-content: space-between;
+  /*@media  screen and (max-width:1130px) {
+      flex-direction: column;
+  }*/
 }
-@media screen and (max-width: 1130px) {
-  .erreur_boutonCarte {
-    flex-direction: column;
-  }
+
+.erreur_boutonAccueil a {
+  font-size: 2em;
+  color: rgb(0, 125, 197);
+  padding: 10px;
+  /*border-radius: 5vh;*/
+  text-align: center;
+  background-color: yellow;
 }
 
 /* /////////////////////////

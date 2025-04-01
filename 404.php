@@ -15,13 +15,13 @@ $erreur_background = get_theme_mod('erreur_background', 'Default Title');
     <p class="erreur_message">
             <?php echo $erreur_message?>
     </p>
-    <div class="erreur_image">
+    <!--<div class="erreur_image">
         <img src="<?php echo $erreur_img?>" alt="image erreur">
-    </div>
+    </div>-->
 
     <div class="erreur_boutonAccueil">
         <a href="index.php">
-        <button>Retour à la page d'accueil</button>
+        Retour à la page d'accueil
         </a>
     </div>
 
@@ -40,9 +40,6 @@ $erreur_background = get_theme_mod('erreur_background', 'Default Title');
     <?php get_search_form();?>
     </div>
 
-    <div class="erreur_icone">
-    <?php get_template_part( 'gabarits/icone' ); ?>
-    </div>
 
     </section>
 <?php get_footer(); ?>
