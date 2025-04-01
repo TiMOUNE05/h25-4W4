@@ -36,14 +36,14 @@
     background-color: rgba(0, 0, 0, 0);
     border: none;
     outline: none;
-    width: 50vh;
+    width: 20vh;
     margin-bottom: 5vh;
     font-size: 5em;
-    height: auto;
     border-bottom: 5px solid yellow;
     &__input{
         flex: 1;
         border: none;
+        color: yellow;
         outline: none;
         background-color: rgba(0, 0, 0, 0);
         &:hover{
@@ -65,9 +65,10 @@
 
     .recherche__input::placeholder {
         font-family: 'Arial', sans-serif;
-        font-size: 5em;    
+        font-size: 2em;    
         font-style: italic;  
         color: yellow;
+        height: 5vh;
         
     }
 }
