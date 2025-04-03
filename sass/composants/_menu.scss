@@ -22,4 +22,30 @@
 
   .menu-item a{
     padding: 2px 5px;
+    
+  }
+
+  .erreur_boutonCarte{
+  .menu{
+    gap: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+     flex-wrap: wrap;
+     @media screen and (max-width:$point__rupture) {
+      flex-direction: column;
+      gap : 20px 0;
+      align-items: center;
+    }
+  }
+
+    .menu-item a{
+      padding: 2px 5px;
+      width: 25vh;
+      /*border-radius: 5vh;*/
+      text-align: center;
+      background-color: yellow;
+      color: black;
+    }
   }

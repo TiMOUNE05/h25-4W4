@@ -1,11 +1,15 @@
 .erreur_titre{
+    color: rgb(255, 175, 55);
    /* text-shadow: 3px 3px 5px rgb(129, 243, 237);*/
     font-size: 4rem;
+    text-align: center;
 }
 
 .erreur_message{
+    color: rgb(255, 175, 55);
     /*text-shadow: 3px 3px 5px rgb(129, 243, 237);*/
     font-size: 2rem;
+    text-align: center;
 }
 
 
@@ -18,7 +22,7 @@
 }
 
 
-.erreur_carte{
+.erreur_carte a{
     width: 25vh;
     /*border-radius: 5vh;*/
     text-align: center;

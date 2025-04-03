@@ -69,6 +69,30 @@ Les composants
   padding: 2px 5px;
 }
 
+.erreur_boutonCarte .menu {
+  gap: 5px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 700px) {
+  .erreur_boutonCarte .menu {
+    flex-direction: column;
+    gap: 20px 0;
+    align-items: center;
+  }
+}
+.erreur_boutonCarte .menu-item a {
+  padding: 2px 5px;
+  width: 25vh;
+  /*border-radius: 5vh;*/
+  text-align: center;
+  background-color: yellow;
+  color: black;
+}
+
 /* *******************
 Le composant .carte
 ********************** */
@@ -195,13 +219,17 @@ Le composant .carte
 }
 
 .erreur_titre {
+  color: rgb(255, 175, 55);
   /* text-shadow: 3px 3px 5px rgb(129, 243, 237);*/
   font-size: 4rem;
+  text-align: center;
 }
 
 .erreur_message {
+  color: rgb(255, 175, 55);
   /*text-shadow: 3px 3px 5px rgb(129, 243, 237);*/
   font-size: 2rem;
+  text-align: center;
 }
 
 .erreur_global {
@@ -212,7 +240,7 @@ Le composant .carte
   align-items: center;
 }
 
-.erreur_carte {
+.erreur_carte a {
   width: 25vh;
   /*border-radius: 5vh;*/
   text-align: center;

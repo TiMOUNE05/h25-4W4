@@ -26,11 +26,11 @@ $erreur_background = get_theme_mod('erreur_background', 'Default Title');
     </div>
 
     <div class="erreur_boutonCarte"> 
-    <?php if (have_posts()) : while (have_posts()) : the_post(); 
-        if (in_category("erreur")) : ?>
-            <?php get_template_part( 'gabarits/carteErreur' ); ?>
-        <?php endif;
-    endwhile; endif; ?>
+    <?php wp_nav_menu(array(
+                'menu'  => 'menu_404',
+		        'container'  => 'div',
+		        'container_class'=> '',
+            )); ?>
 </div>
 
 
