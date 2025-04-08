@@ -273,6 +273,31 @@ Le composant .carte
   background-color: yellow;
 }
 
+.categorie__ul {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.categorie__ul__li {
+  /*border: 1px solid #aaa;*/
+  font-size: 1.5rem;
+  color: black;
+  background-color: #00e6f7;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.descriptionArticleCategorie {
+  display: none;
+}
+
+.TitreArticleCategorie {
+  cursor: pointer;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */
