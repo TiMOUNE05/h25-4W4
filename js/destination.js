@@ -14,39 +14,7 @@
              mon_fetch(apiUrl);
         });
     });
-            /*function mon_fetch(apiUrl)
-            {
-                // Refaire la requête avec le nouvel apiUrl après le clic
-            fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                const destinationList = document.querySelector('.destination__list');
-                destinationList.innerHTML = ''; // Vider la liste avant d'ajouter les nouveaux articles
-                data.forEach(article => {
-                    const articleElement = document.createElement('div');
-                    articleElement.innerHTML = `
-                        <h3 class="TitreArticleCategorie">${article.title.rendered}</h3>
-                        <div class="descriptionArticleCategorie">${article.excerpt.rendered}</div>
-                        <a href="${article.link}">Lire plus</a>
-                    `;
-                    destinationList.appendChild(articleElement);
-                });
-            })
-            .catch(error => console.error('Erreur lors de la récupération des articles:', error));
-            }
-           
-                document.getElementsByClassName('TitreArticleCategorie').addEventListener('click', function() {
-                    const descriptionElement = document.getElementById('descriptionArticleCategorie');
-                    // Vérifie si l'élément est actuellement caché
-                    if (descriptionElement.style.display === 'none') {
-                        // Si caché, le rendre visible
-                        descriptionElement.style.display = 'block';
-                    } else {
-                        // Sinon, le cacher à nouveau
-                        descriptionElement.style.display = 'none';
-                    }
-                });*/
-
+    
                 function mon_fetch(apiUrl) {
                     fetch(apiUrl)
                         .then(response => response.json())
@@ -65,14 +33,17 @@
                             });
                 
                             // Ajouter un event listener à chaque élément avec la classe 'TitreArticleCategorie'
-                            const titreElements = document.getElementsByClassName('TitreArticleCategorie');
+                            const titreElements = document.getElementsByClassName('TitreArticleCategorie')
                             Array.from(titreElements).forEach(titre => {
                                 titre.addEventListener('click', function() {
                                     const descriptionElement = titre.nextElementSibling; // Trouve le div correspondant à la description
+                                    descriptionElement.style.animationPlaystate = "paused"
                                     // Vérifie si l'élément est actuellement caché
                                     if (descriptionElement.style.display === 'none') {
                                         // Si caché, le rendre visible
                                         descriptionElement.style.display = 'block';
+                                        descriptionElement.style.animationPlaystate = "running"
+
                                     } else {
                                         // Sinon, le cacher à nouveau
                                         descriptionElement.style.display = 'none';

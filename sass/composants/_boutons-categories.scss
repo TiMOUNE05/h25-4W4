@@ -16,10 +16,21 @@
 
 }
 
+@keyframes anim-accordeon{
+    0% {
+        transform: scale(0.0);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
 .descriptionArticleCategorie{
     display: none;
+    animation: anim-accordeon 2s ease-in-out;
 }
 
 .TitreArticleCategorie{
     cursor: pointer;
+    
 }

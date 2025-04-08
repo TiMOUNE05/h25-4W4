@@ -290,8 +290,17 @@ Le composant .carte
   cursor: pointer;
 }
 
+@keyframes anim-accordeon {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .descriptionArticleCategorie {
   display: none;
+  animation: anim-accordeon 2s ease-in-out;
 }
 
 .TitreArticleCategorie {
