@@ -12,22 +12,29 @@
         border-radius: 10px;
         padding: 5px;
         cursor: pointer;
+        &:hover{
+            background-color: #007cf7;
+        }
+        &:active{
+            background-color: #007cf7;
+        }
+        &.active{
+            background-color: #007cf7;
+        }
     }
 
 }
 
-@keyframes anim-accordeon{
-    0% {
-        transform: scale(0.0);
-    }
-    100% {
-        transform: scale(1.0);
-    }
+.descriptionArticleCategorie {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
-.descriptionArticleCategorie{
-    display: none;
-    animation: anim-accordeon 2s ease-in-out;
+.descriptionArticleCategorie.active {
+    max-height: 300px;
+    opacity: 1;
 }
 
 .TitreArticleCategorie{

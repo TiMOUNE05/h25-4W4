@@ -289,18 +289,26 @@ Le composant .carte
   padding: 5px;
   cursor: pointer;
 }
-
-@keyframes anim-accordeon {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+.categorie__ul__li:hover {
+  background-color: #007cf7;
 }
+.categorie__ul__li:active {
+  background-color: #007cf7;
+}
+.categorie__ul__li.active {
+  background-color: #007cf7;
+}
+
 .descriptionArticleCategorie {
-  display: none;
-  animation: anim-accordeon 2s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.descriptionArticleCategorie.active {
+  max-height: 300px;
+  opacity: 1;
 }
 
 .TitreArticleCategorie {
@@ -317,11 +325,6 @@ Layout
 .populaire > .global {
   display: flex;
   flex-wrap: wrap;
-}
-
-.hero {
-  min-height: 100vh;
-  background-repeat: no-repeat;
 }
 
 .hero__titre {
@@ -557,4 +560,17 @@ footer {
 
 .recherche {
   width: 30vh;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+}
+.hero__carrousel {
+  position: absolute;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */

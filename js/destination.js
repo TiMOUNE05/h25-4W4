@@ -8,11 +8,17 @@
     console.log("categorie__ul__li.length", categorie__ul__li.length);
     categorie__ul__li.forEach(li => {
         li.addEventListener("click", function() {
+             categorie__ul__li.forEach(el => el.classList.remove("active"));
+             li.classList.add("active");
             console.log(li.dataset.id);
             categoryId = li.dataset.id;
             apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
              mon_fetch(apiUrl);
+
+             
         });
+
+        
     });
     
                 function mon_fetch(apiUrl) {
@@ -26,8 +32,8 @@
                                 const articleElement = document.createElement('div');
                                 articleElement.innerHTML = `
                                     <h3 class="TitreArticleCategorie">${article.title.rendered}</h3>
-                                    <div class="descriptionArticleCategorie" style="display: none;">${article.excerpt.rendered}</div>
-                                    <a href="${article.link}">Lire plus</a>
+                                    <div class="descriptionArticleCategorie"> ${article.excerpt.rendered}</div>
+                                    <a class="descriptionArticleCategorie" href="${article.link}">Lire plus</a>
                                 `;
                                 destinationList.appendChild(articleElement);
                             });
@@ -36,18 +42,12 @@
                             const titreElements = document.getElementsByClassName('TitreArticleCategorie')
                             Array.from(titreElements).forEach(titre => {
                                 titre.addEventListener('click', function() {
-                                    const descriptionElement = titre.nextElementSibling; // Trouve le div correspondant à la description
-                                    descriptionElement.style.animationPlaystate = "paused"
-                                    // Vérifie si l'élément est actuellement caché
-                                    if (descriptionElement.style.display === 'none') {
-                                        // Si caché, le rendre visible
-                                        descriptionElement.style.display = 'block';
-                                        descriptionElement.style.animationPlaystate = "running"
-
-                                    } else {
-                                        // Sinon, le cacher à nouveau
-                                        descriptionElement.style.display = 'none';
-                                    }
+                                    const parent = titre.parentElement;
+                                    const descriptionElements = parent.querySelectorAll('.descriptionArticleCategorie');
+                                        descriptionElements.forEach(el => {
+                                            el.classList.toggle('active');
+                                    });
+                                    
                                 });
                             });
                         })
