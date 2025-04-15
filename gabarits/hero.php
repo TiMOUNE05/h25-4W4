@@ -19,9 +19,9 @@ $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
         <div class= "hero__carrousel" style="background-image: url(<?php echo $hero_background[1]?>);"></div>
         <div class= "hero__carrousel" style="background-image: url(<?php echo $hero_background[2]?>);"></div>
         <div class="hero__radio">
-            <input class="hero__radio__input" type="radio" name="carrousel" data-id_carrousel="0" checked = "checked"> 
-            <input class="hero__radio__input" type="radio" name="carrousel" data-id_carrousel="1">
-            <input class="hero__radio__input" type="radio" name="carrousel" data-id_carrousel="2">
+            <input class="hero__radio__input" type="radio" name="carrousel" data-id-carrousel="0" checked = "checked"> 
+            <input class="hero__radio__input" type="radio" name="carrousel" data-id-carrousel="1">
+            <input class="hero__radio__input" type="radio" name="carrousel" data-id-carrousel="2">
         </div>
 
         <!--////////////////////////////////////////////////////////////////////////////////////hero__contenu-->
