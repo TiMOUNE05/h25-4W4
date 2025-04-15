@@ -15,9 +15,11 @@ $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
 <section class="hero">
        <!--////////////////////////////////////////////////////////////////////////////////////hero__carrousel-->
 
-        <div class= "hero__carrousel" style="background-image: url(<?php echo $hero_background[0]?>);"></div>
-        <div class= "hero__carrousel" style="background-image: url(<?php echo $hero_background[1]?>);"></div>
-        <div class= "hero__carrousel" style="background-image: url(<?php echo $hero_background[2]?>);"></div>
+            <?php foreach ($hero_background as $index => $url): ?>
+            <div class="hero__carrousel <?php echo $index === 0 ? 'hero__carrousel--active' : ''; ?>" 
+                style="background-image: url(<?php echo $url; ?>);">
+            </div>
+        <?php endforeach; ?>
         <div class="hero__radio">
             <input class="hero__radio__input" type="radio" name="carrousel" data-id-carrousel="0" checked = "checked"> 
             <input class="hero__radio__input" type="radio" name="carrousel" data-id-carrousel="1">
