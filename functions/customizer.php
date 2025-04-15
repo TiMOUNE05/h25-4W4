@@ -35,7 +35,8 @@ $wp_customize->add_control('hero_courriel', array(
 
 
 //////////////////////////////////////////image en background//////////////////////////////////////////
-for ($k=0; $k < 3; $k++){
+for ($k=0; $k < 3; $k++)
+{
 
   $wp_customize->add_setting('hero_background_' . $k, array(
     'default' => '',

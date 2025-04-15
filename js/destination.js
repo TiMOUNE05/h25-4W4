@@ -1,5 +1,4 @@
 (function() {
-    console.log("vive Javascript");
 
     let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
     const domaine = window.location.href;
