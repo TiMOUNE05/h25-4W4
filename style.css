@@ -570,12 +570,14 @@ footer {
 .hero__carrousel {
   position: absolute;
   background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
   z-index: -1;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 .hero__carrousel--active {
   opacity: 1;
