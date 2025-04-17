@@ -101,6 +101,19 @@ $wp_customize->add_control('footer_telephone', array(
 //////////////////////////////////////////couleur de l'icone de la zone hero//////////////////////////////////////////
 
 
+$wp_customize->add_setting('couleur_vague', array(
+  'default' => '#ffffff',
+  'sanitize_callback' => 'sanitize_hex_color',
+));
+
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'couleur_vague', array(
+  'label' => __('Couleur de la vague', 'theme_31w'),
+  'section' => 'footer_section',
+)));
+
+//////////////////////////////////////////couleur de l'icone de la zone hero//////////////////////////////////////////
+
+
 $wp_customize->add_setting('hero_icone', array(
   'default' => '',
   'sanitize_callback' => 'esc_url_raw',
