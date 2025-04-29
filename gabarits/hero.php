@@ -21,26 +21,31 @@ $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
             </div>
         <?php endforeach; ?>
         
-        <div class="hero__radio">
-            <?php foreach ($hero_background as $index => $url): ?>
+            <div class="hero__radio">
+        <?php foreach ($hero_background as $index => $url): ?>
+            <label class="hero__radio__label">
                 <input 
+                    id="radio_<?php echo $index; ?>"
                     class="hero__radio__input" 
                     type="radio" 
                     name="carrousel" 
                     data-id-carrousel="<?php echo $index; ?>"
                     <?php echo $index === 0 ? 'checked' : ''; ?>>
-            <?php endforeach; ?>
-        </div>
+            </label>
+        <?php endforeach; ?>
+    </div>
 
         <!--////////////////////////////////////////////////////////////////////////////////////hero__contenu-->
 
         <div class="hero__contenu global">
+            <div class="hero__animation">
             <h1 class="hero__titre">
                 <?php echo bloginfo('name') ?>
             </h1>
             <p class="hero__description">
                 <?php echo bloginfo('description') ?>
             </p>
+            </div>
             <p class="hero__courriel">
                Courriel: <?php echo $hero_courriel?>
             </p>

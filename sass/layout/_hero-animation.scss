@@ -1,0 +1,18 @@
+.hero{
+    &__titre, &__description{
+        position : relative;
+        animation : anim_contenu 2s cubic-bezier(.91,-0.59,.19,1.59) forwards
+    }
+    &__titre{   
+        transform: translateY(-1000px);
+    }
+    &__description{
+        transform: translateX(-1000px);
+        animation-delay: 2s;
+    }
+}
+@keyframes anim_contenu {
+    100% {
+        transform : translate(0,0);
+    }
+}

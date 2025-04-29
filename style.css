@@ -315,6 +315,10 @@ Le composant .carte
   cursor: pointer;
 }
 
+.vague {
+  position: relative;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */
@@ -526,21 +530,6 @@ form {
 /*
   --------------------------------- Layout du pied de page
 */
-footer {
-  position: relative;
-  background-color: #0097fc;
-  z-index: 0;
-}
-
-.footer__vague {
-  position: absolute;
-  top: -1px;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  pointer-events: none;
-}
-
 .piedpage {
   display: flex;
   flex-direction: column;
@@ -559,6 +548,8 @@ footer {
 }
 .piedpage__s1__adresse {
   flex: 0 0 40%;
+  /*&__coord{}
+  &__recherche{}*/
 }
 .piedpage__s1__description {
   flex: 1 0 400px;
@@ -599,4 +590,22 @@ footer {
   justify-content: center;
   gap: 2rem;
   width: 100%;
+}
+
+.hero__titre, .hero__description {
+  position: relative;
+  animation: anim_contenu 2s cubic-bezier(0.91, -0.59, 0.19, 1.59) forwards;
+}
+.hero__titre {
+  transform: translateY(-1000px);
+}
+.hero__description {
+  transform: translateX(-1000px);
+  animation-delay: 2s;
+}
+
+@keyframes anim_contenu {
+  100% {
+    transform: translate(0, 0);
+  }
 }/*# sourceMappingURL=style.css.map */

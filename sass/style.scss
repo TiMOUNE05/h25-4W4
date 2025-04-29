@@ -32,6 +32,7 @@ Les composants
 @import "composants/recherche";
 @import "composants/erreur";
 @import "composants/boutons-categories";
+@import "composants/vague";
 
 
 /* /////////////////////////
@@ -41,3 +42,4 @@ Layout
 @import "layout/entete";
 @import "layout/footer";
 @import "layout/hero";
+@import "layout/_hero-animation";
