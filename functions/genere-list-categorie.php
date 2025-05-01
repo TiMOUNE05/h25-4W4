@@ -29,4 +29,17 @@ function categories_liste($parent_slug){
     echo 'La catégorie "destination" n\'existe pas.';
    }
    }
+   function categorie_par_destination($cat_a_retirer = '') {
+    $categories = get_the_category(); // Récupère les catégories de l'article courant
+    $output = '';
+
+    foreach ($categories as $category) {
+        if ($category->name !== $cat_a_retirer) {
+            $output .= '<a class="carte__categorie" href="' . esc_url(get_category_link($category->term_id)) . '">'
+                     . esc_html($category->name) . '</a>';
+        }
+    }
+
+    return $output;
+}
 ?>
