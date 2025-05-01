@@ -148,6 +148,10 @@ Le composant .carte
 .carte .post-categories a {
   text-decoration: none;
 }
+.carte .carte__categories {
+  position: relative;
+  top: 10px;
+}
 
 .recherche {
   display: flex;

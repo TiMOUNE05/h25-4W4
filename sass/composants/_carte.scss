@@ -61,5 +61,9 @@ Le composant .carte
         text-decoration: none;
       }
     }
+    & .carte__categories{
+      position: relative;
+      top: 10px;
+    }
   }
   

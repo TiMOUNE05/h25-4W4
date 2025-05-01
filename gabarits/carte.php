@@ -19,7 +19,19 @@
     <h2 class="carte__titre"><?php the_title(); ?></h2>
     <p class="carte__description"><?php echo wp_trim_words(get_the_content(),10, " ... " ); ?></p>
     <a class="carte__bouton carte__bouton--actif" href="<?php the_permalink() ?>">suite ...</a>
-    <?php the_category(); ?>
+    <div class="carte__categories">
+    <?php
+    $categories = get_the_category();
+    foreach ($categories as $category) {
+        if ($category->name !== 'Populaire') {
+            echo '<a class="carte__categorie" href="' . esc_url(get_category_link($category->term_id)) . '">'
+                . esc_html($category->name) .
+                '</a>';
+        }
+    }
+    ?>
+</div>
+
     <p>Température maximum&nbsp;<?php echo the_field('temperature_maximum'); ?> &#x00B0;C</p>
     <p>Température minimum&nbsp;<?php echo the_field('temperature_minimum'); ?> &#x00B0;C</p>
     <p>Note:&nbsp;<?php echo the_field('note'); ?> </p>
