@@ -40,7 +40,7 @@ vague($footer_couleur_arriere);
         </section>
 
         <section class="piedpage__s2">
-            <?php get_template_part('gabarits/icone'); ?>
+            <?php afficher_icones_sociaux(); ?>
         </section>
 
         <section class="piedpage__s3">

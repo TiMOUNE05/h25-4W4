@@ -58,7 +58,7 @@ $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
             <button class="hero__bouton">
                 s'inscrire
             </button>
-            <?php get_template_part( 'gabarits/icone' ); ?>
+            <?php afficher_icones_sociaux(); ?>
             <p> auteur: <?php echo $hero_auteur?></p>
         </div>
     </section>

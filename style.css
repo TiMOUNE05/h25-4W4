@@ -323,6 +323,12 @@ Le composant .carte
   position: relative;
 }
 
+.icone_app {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
 /* /////////////////////////
 Layout
 /////////////////////////// */
