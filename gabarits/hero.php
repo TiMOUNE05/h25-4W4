@@ -39,12 +39,28 @@ $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
 
         <div class="hero__contenu global">
             <div class="hero__animation">
-            <h1 class="hero__titre">
-                <?php echo bloginfo('name') ?>
-            </h1>
-            <p class="hero__description">
-                <?php echo bloginfo('description') ?>
-            </p>
+                <h1 class="hero__titre">
+                    <?php echo bloginfo('name') ?>
+                </h1>
+                <p class="hero__description">
+                    <?php echo bloginfo('description') ?>
+                </p>
+            </div>
+            <div class="hero__animation">
+                <h1 class="hero__titre">
+                    <?php echo bloginfo('name') ?>
+                </h1>
+                <p class="hero__description">
+                    <?php echo bloginfo('description') ?>
+                </p>
+            </div>
+            <div class="hero__animation">
+                <h1 class="hero__titre">
+                    <?php echo bloginfo('name') ?>
+                </h1>
+                <p class="hero__description">
+                    <?php echo bloginfo('description') ?>
+                </p>
             </div>
             <p class="hero__courriel">
                Courriel: <?php echo $hero_courriel?>
