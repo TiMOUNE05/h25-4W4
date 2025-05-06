@@ -194,6 +194,24 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur
   'label' => __('Page erreur image en background', 'theme_31w'),
   'section' => 'erreur_section',
 )));
+
+//////////////////////////////////////////Icônes sociaux//////////////////////////////////////////
+
+$icones = ['facebook', 'linkedin', 'paypal', 'stackoverflow', 'github', 'wordpress'];
+
+foreach ($icones as $icone) {
+    $wp_customize->add_setting("lien_icone_$icone", array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control("lien_icone_$icone", array(
+        'label' => __("Lien vers $icone", 'theme_31w'),
+        'section' => 'hero_section',
+        'type' => 'url',
+    ));
+}
+
   
   
 
