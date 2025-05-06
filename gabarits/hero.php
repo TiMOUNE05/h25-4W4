@@ -38,7 +38,7 @@ $hero_courriel = get_theme_mod('hero_courriel', 'Default Title');
         <!--////////////////////////////////////////////////////////////////////////////////////hero__contenu-->
 
         <div class="hero__contenu global">
-            <div class="hero__animation">
+            <div class="hero__animation hero__animation--active">
                 <h1 class="hero__titre">
                     <?php echo bloginfo('name') ?>
                 </h1>

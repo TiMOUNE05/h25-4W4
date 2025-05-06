@@ -30,10 +30,14 @@
     }
 
     function parcourirAnimation() {
-        hero__animation.forEach(elm => {
-            elm.style.display = "none";
+        hero__animation.forEach((elm, index) => {
+            elm.classList.remove("hero__animation--active");
+            if (index === currentIndex) {
+                elm.classList.add("hero__animation--active");
+            }
         });
     }
+    
 
     // Auto défilement toutes les 5 secondes
     let currentIndex = 0;

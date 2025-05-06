@@ -613,6 +613,12 @@ form {
   transform: translateX(-1000px);
   animation-delay: 2s;
 }
+.hero .hero__animation {
+  display: none;
+}
+.hero .hero__animation--active {
+  display: block;
+}
 
 @keyframes anim_contenu {
   100% {

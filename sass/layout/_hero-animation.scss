@@ -10,6 +10,13 @@
         transform: translateX(-1000px);
         animation-delay: 2s;
     }
+
+    .hero__animation {
+        display: none;
+    }
+    .hero__animation--active {
+        display: block;
+    }
 }
 @keyframes anim_contenu {
     100% {
