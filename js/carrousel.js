@@ -1,23 +1,11 @@
-(function(){
+(function () {
     console.log("carrousel.js");
 
     let hero__radio__input = document.querySelectorAll(".hero__radio__input");
     let carrouselImage = document.querySelectorAll(".hero__carrousel");
     let hero__animation = document.querySelectorAll(".hero__animation");
 
-    console.log("hero__radio__input.length=", hero__radio__input.length );
-
-    hero__radio__input.forEach(input => {
-        input.addEventListener("change", function () {
-            const id = input.dataset.idCarrousel;
-
-            updateCarrousel(id);
-            parcourirAnimation();
-            if (hero__animation[id]) {
-                hero__animation[id].style.display = "block";
-            }
-        });
-    });
+    let currentIndex = 0;
 
     function updateCarrousel(id) {
         carrouselImage.forEach(item => item.classList.remove("hero__carrousel--active"));
@@ -37,16 +25,19 @@
             }
         });
     }
-    
 
-    // Auto défilement toutes les 5 secondes
-    let currentIndex = 0;
+    hero__radio__input.forEach(input => {
+        input.addEventListener("change", function () {
+            const id = parseInt(input.dataset.idCarrousel);
+            currentIndex = id;
+            updateCarrousel(id);
+            parcourirAnimation();
+        });
+    });
+
     setInterval(() => {
         currentIndex = (currentIndex + 1) % carrouselImage.length;
         updateCarrousel(currentIndex);
         parcourirAnimation();
-        if (hero__animation[currentIndex]) {
-            hero__animation[currentIndex].style.display = "block";
-        }
     }, 5000);
 })();
