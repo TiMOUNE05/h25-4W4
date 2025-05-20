@@ -32,6 +32,7 @@
     transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
+
 .descriptionArticleCategorie.active {
     max-height: 300px;
     opacity: 1;
@@ -40,4 +41,11 @@
 .TitreArticleCategorie{
     cursor: pointer;
     
+}
+
+.destination__list div{
+    margin-top: 10px;
+    background-color: #fff3e2;
+    padding: 10px;
+    border-radius: 10px;
 }

@@ -319,6 +319,13 @@ Le composant .carte
   cursor: pointer;
 }
 
+.destination__list div {
+  margin-top: 10px;
+  background-color: #fff3e2;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .vague {
   position: relative;
 }

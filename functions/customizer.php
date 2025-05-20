@@ -206,6 +206,19 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_
     'section' => 'hero_section',
 )));
 
+///////////////////////////////////////////Image de destination dans le footer////////////////////////////////////////////
+$wp_customize->add_setting('footer_image_destination', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_image_destination', array(
+  'label' => __('Image de destination du pied de page', 'theme_31w'),
+  'section' => 'footer_section',
+  'settings' => 'footer_image_destination',
+)));
+
+
 
 //////////////////////////////////////////Icônes sociaux//////////////////////////////////////////
 
