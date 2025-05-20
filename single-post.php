@@ -23,8 +23,8 @@ $image_defaut = get_theme_mod('image_defaut_destination');
                         }
                     ?>
                     <?php
-                    if (has_post_thumbnail()) 
-                    the_post_thumbnail(); ?>
+                    if (get_post_type() !== 'destination' && has_post_thumbnail())
+                    the_post_thumbnail('medium'); ?>
                     <h2 class="populaire__titre"><?php the_title(); ?></h2>
                     <div class="pouplaire__contenu"><?php the_content(); ?></div>
                     <?php the_category(); ?>
