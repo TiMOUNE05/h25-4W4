@@ -6,7 +6,8 @@ $erreur_background = get_theme_mod('erreur_background', 'Default Title');
 ?>
 <?php get_header() ?>
 
-    <section class="erreur_global" style= "background-image: url(<?php echo $erreur_background?>); background-repeat: no-repeat color:">
+<section class="erreur_global" style="background-image: url(<?php echo esc_url($erreur_background); ?>); background-repeat: no-repeat; background-size: cover; background-position: center;">
+
 
     <h2 class="erreur_titre">
             <?php echo $erreur_titre?>
@@ -39,7 +40,6 @@ $erreur_background = get_theme_mod('erreur_background', 'Default Title');
     <div class="erreur_recherche">
     <?php get_search_form();?>
     </div>
-
 
     </section>
 <?php get_footer(); ?>

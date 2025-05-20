@@ -192,7 +192,6 @@ Le composant .carte
   outline: none;
   width: 20vh;
   margin-bottom: 5vh;
-  font-size: 5em;
   border-bottom: 5px solid yellow;
 }
 .erreur_recherche .recherche__input {

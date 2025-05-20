@@ -1,7 +1,7 @@
 .recherche{
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     gap: 0rem;
     border: 1px solid rgba(0,0,0,0.1);
     &__input{
@@ -32,25 +32,27 @@
     }
 }
 
-.erreur_recherche .recherche{
-    background-color: rgba(0, 0, 0, 0);
+.erreur_recherche .recherche__input {
+    flex: 1;
+    height: 3.5rem;
+    font-size: 1rem;
     border: none;
+    color: yellow;
     outline: none;
-    width: 20vh;
-    margin-bottom: 5vh;
-    font-size: 5em;
-    border-bottom: 5px solid yellow;
-    &__input{
-        flex: 1;
-        border: none;
-        color: yellow;
-        outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    &:hover {
         background-color: rgba(0, 0, 0, 0);
-        &:hover{
-            background-color: rgba(0, 0, 0, 0);
-        }
-        border-right : 1px dotted rgba(0, 0, 0, 0)
     }
+    border-right: 1px dotted rgba(0, 0, 0, 0);
+}
+
+.erreur_recherche .recherche__input::placeholder {
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    font-style: italic;
+    color: yellow;
+}
 
     &__img{
         display: none;
@@ -71,5 +73,5 @@
         height: 5vh;
         
     }
-}
+
 

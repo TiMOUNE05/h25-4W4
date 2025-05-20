@@ -1,3 +1,17 @@
    .vague {
     position: relative;
+    animation: bougerVague 8s ease-in-out infinite;
 }
+
+@keyframes bougerVague {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
