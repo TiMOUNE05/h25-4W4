@@ -40,6 +40,8 @@
 
 .TitreArticleCategorie{
     cursor: pointer;
+    color: #00e6f7;
+    font-size: 1.5rem;
     
 }
 
@@ -48,4 +50,8 @@
     background-color: #fff3e2;
     padding: 10px;
     border-radius: 10px;
+}
+
+.destination{
+    padding: 0 20vw 10vh 20vw;
 }

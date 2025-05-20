@@ -24,7 +24,7 @@ add_action( 'after_setup_theme', 'mon_theme_supports' );
 
 
 function theme_tp_enqueue_styles() { 
-wp_enqueue_style('normalize', get_template_directory_uri() . 'normalize.css'); 
+wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css'); 
 wp_enqueue_style('main-style', get_stylesheet_uri()); 
 
 wp_enqueue_script(

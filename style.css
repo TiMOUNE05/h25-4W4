@@ -317,6 +317,8 @@ Le composant .carte
 
 .TitreArticleCategorie {
   cursor: pointer;
+  color: #00e6f7;
+  font-size: 1.5rem;
 }
 
 .destination__list div {
@@ -324,6 +326,10 @@ Le composant .carte
   background-color: #fff3e2;
   padding: 10px;
   border-radius: 10px;
+}
+
+.destination {
+  padding: 0 20vw 10vh 20vw;
 }
 
 .vague {
@@ -346,6 +352,7 @@ Layout
 .populaire > .global {
   display: flex;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 .hero__titre {
