@@ -1,59 +1,87 @@
-(function() {
+(function () {
+    console.log("destination.js chargé");
 
-    let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
-    const domaine = window.location.href;
-    let apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
-    const categorie__ul__li = document.querySelectorAll(".categorie__ul__li");
-    console.log("categorie__ul__li.length", categorie__ul__li.length);
-    categorie__ul__li.forEach(li => {
-        li.addEventListener("click", function() {
-             categorie__ul__li.forEach(el => el.classList.remove("active"));
-             li.classList.add("active");
-            console.log(li.dataset.id);
-            categoryId = li.dataset.id;
-            apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
-             mon_fetch(apiUrl);
+    const domaine = document.querySelector('base')?.getAttribute('href') || window.location.origin;
+    const destinationList = document.querySelector('.destination__list');
 
-             
+    if (!destinationList) return;
+
+    // ========== MÉTHODE CATEGORIES (page d'accueil ou autres avec .categorie__ul__li)
+    const categorieItems = document.querySelectorAll(".categorie__ul__li");
+    if (categorieItems.length > 0 && !document.body.classList.contains('page-pays')) {
+        let categoryId = 3; // ID de catégorie par défaut
+        let apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
+        mon_fetch(apiUrl);
+
+        categorieItems.forEach(li => {
+            li.addEventListener("click", function () {
+                categorieItems.forEach(el => el.classList.remove("active"));
+                li.classList.add("active");
+                categoryId = li.dataset.id;
+                apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
+                mon_fetch(apiUrl);
+            });
+        });
+    }
+
+    // ========== MÉTHODE SEARCH (page-pays avec .menu-pays .pays__item)
+    const paysItems = document.querySelectorAll(".menu-pays .pays__item");
+    if (paysItems.length > 0 && document.querySelector('.global__pays')) {
+        paysItems.forEach(li => {
+            li.addEventListener("click", function () {
+                const nomPays = li.dataset.pays;
+                const apiUrl = `${domaine}/wp-json/wp/v2/posts?search=${encodeURIComponent(nomPays)}`;
+
+                paysItems.forEach(item => item.classList.remove("selected"));
+                li.classList.add("selected");
+
+                mon_fetch(apiUrl);
+            });
         });
 
-        
-    });
-    
-                function mon_fetch(apiUrl) {
-                    fetch(apiUrl)
-                        .then(response => response.json())
-                        .then(data => {
-                            const destinationList = document.querySelector('.destination__list');
-                            destinationList.innerHTML = ''; // Vider la liste avant d'ajouter les nouveaux articles
-                
-                            data.forEach(article => {
-                                const articleElement = document.createElement('div');
-                                articleElement.innerHTML = `
-                                    <h3 class="TitreArticleCategorie">${article.title.rendered}</h3>
-                                    <div class="descriptionArticleCategorie"> ${article.excerpt.rendered}</div>
-                                    <a class="descriptionArticleCategorie" href="${article.link}">Lire plus</a>
-                                `;
-                                destinationList.appendChild(articleElement);
-                            });
-                
-                            // Ajouter un event listener à chaque élément avec la classe 'TitreArticleCategorie'
-                            const titreElements = document.getElementsByClassName('TitreArticleCategorie')
-                            Array.from(titreElements).forEach(titre => {
-                                titre.addEventListener('click', function() {
-                                    const parent = titre.parentElement;
-                                    const descriptionElements = parent.querySelectorAll('.descriptionArticleCategorie');
-                                        descriptionElements.forEach(el => {
-                                            el.classList.toggle('active');
-                                    });
-                                    
-                                });
-                            });
-                        })
-                        .catch(error => console.error('Erreur lors de la récupération des articles:', error));
-                }
-                
-              }
+        // Chargement initial pour "France"
+        const initialSearchUrl = `${domaine}/wp-json/wp/v2/posts?search=France`;
+        mon_fetch(initialSearchUrl);
+    }
 
+    // ========== Fonction commune pour afficher les articles + accordéon
+    function mon_fetch(apiUrl) {
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                destinationList.innerHTML = '';
 
-)();
+                data.forEach(article => {
+                    if (article.categories && article.categories.includes(5)) return; // Exclure "populaire"
+
+                    const articleElement = document.createElement('div');
+                    articleElement.innerHTML = `
+                        <h3 class="TitreArticleCategorie">${article.title.rendered}</h3>
+                        <div class="descriptionArticleCategorie">${article.excerpt.rendered}</div>
+                        <a href="${article.link}">Lire plus</a>
+                    `;
+                    destinationList.appendChild(articleElement);
+                });
+
+                // Accordéon animé
+                const titres = document.getElementsByClassName('TitreArticleCategorie');
+                Array.from(titres).forEach(titre => {
+                    titre.addEventListener('click', function () {
+                        const desc = titre.nextElementSibling;
+                        if (desc.style.maxHeight) {
+                            desc.style.maxHeight = null;
+                            desc.classList.remove('open');
+                        } else {
+                            Array.from(document.getElementsByClassName('descriptionArticleCategorie')).forEach(el => {
+                                el.style.maxHeight = null;
+                                el.classList.remove('open');
+                            });
+                            desc.style.maxHeight = desc.scrollHeight + "px";
+                            desc.classList.add('open');
+                        }
+                    });
+                });
+            })
+            .catch(error => console.error('Erreur API:', error));
+    }
+})();

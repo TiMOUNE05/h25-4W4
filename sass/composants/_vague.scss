@@ -1,6 +1,7 @@
    .vague {
     position: relative;
     animation: bougerVague 8s ease-in-out infinite;
+    z-index: -1;
 }
 
 @keyframes bougerVague {

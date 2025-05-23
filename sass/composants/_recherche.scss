@@ -1,77 +1,82 @@
-.recherche{
+.recherche {
     display: flex;
     align-items: center;
     font-size: 0.8rem;
     gap: 0rem;
-    border: 1px solid rgba(0,0,0,0.1);
-    &__input{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  
+    &__input {
+      flex: 1;
+      height: 1.8rem;
+      border: none;
+      outline: none;
+      background-color: rgba(0, 0, 0, 0.02);
+      border-right: 1px dotted rgba(0, 0, 0, 0.2);
+  
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+  
+      &::placeholder {
+        font-family: 'Arial', sans-serif;
+        font-size: 16px;
+        font-style: italic;
+      }
+    }
+  
+    &__img {
+      flex: 0 0 20px;
+      padding: 0 3px;
+      display: flex;
+      align-items: center;
+    }
+  
+    &__bouton {
+      display: block;
+    }
+  
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+  
+  // Style spécifique à la page d'erreur
+  .erreur_recherche {
+    .recherche {
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      width: 20vh;
+      margin-bottom: 5vh;
+      border-bottom: 5px solid yellow;
+  
+      &__input {
         flex: 1;
-        height: 1.8rem;
-        border: none;
-        outline: none;
-        background-color: rgba(0,0,0,.02);
-        &:hover{
-            background-color: rgba(0,0,0,.05);
-        }
-        border-right : 1px dotted rgba(0,0,0,0.2)
-    }
-    &__img{
-        flex: 0 0 20px;
-        padding: 0 3px;
-       
-    }
-
-    .recherche__input::placeholder {
-        font-family: 'Arial', sans-serif;
-        font-size: 16px;    
-        font-style: italic;  
-    }
-
-      @media screen and (max-width:800px){
-        display: none;
-    }
-}
-
-.erreur_recherche .recherche__input {
-    flex: 1;
-    height: 3.5rem;
-    font-size: 1rem;
-    border: none;
-    color: yellow;
-    outline: none;
-    background-color: rgba(0, 0, 0, 0);
-    box-sizing: border-box;
-    &:hover {
-        background-color: rgba(0, 0, 0, 0);
-    }
-    border-right: 1px dotted rgba(0, 0, 0, 0);
-}
-
-.erreur_recherche .recherche__input::placeholder {
-    font-family: 'Arial', sans-serif;
-    font-size: 2em;
-    font-style: italic;
-    color: yellow;
-}
-
-    &__img{
-        display: none;
-        flex: 0 0 20px;
-        padding: 0 3px;
-       
-    }
-
-    .recherche__bouton{
-        display: none;
-    }
-
-    .recherche__input::placeholder {
-        font-family: 'Arial', sans-serif;
-        font-size: 2em;    
-        font-style: italic;  
+        height: 3.5rem;
+        font-size: 1rem;
         color: yellow;
-        height: 5vh;
-        
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        border-right: 1px dotted rgba(0, 0, 0, 0);
+  
+        &:hover {
+          background-color: rgba(0, 0, 0, 0);
+        }
+  
+        &::placeholder {
+          font-family: 'Arial', sans-serif;
+          font-size: 2em;
+          font-style: italic;
+          color: yellow;
+        }
+      }
+  
+      &__img {
+        display: none;
+      }
+  
+      &__bouton {
+        display: none;
+      }
     }
-
-
+  }
+  

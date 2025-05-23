@@ -1,0 +1,38 @@
+.rest__api{
+    background-color: rgb(252, 185, 0);;
+}
+
+.menu-pays {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.pays__item {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.pays__item.selected {
+    background-color: #0056b3;
+}
+.destination-item {
+    background-color: #e0f0ff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 6px;
+}
+.TitreArticleCategorie {
+    cursor: pointer;
+}
+.descriptionArticleCategorie {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.descriptionArticleCategorie.open {
+    margin-top: 10px;
+}

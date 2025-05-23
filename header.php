@@ -7,6 +7,7 @@
    <!-- <link rel="stylesheet" href="normalize.css"> -->
    <!-- <link rel="stylesheet" href="style.css">-->
     <?php wp_head(); ?> 
+    <base href="<?php echo get_site_url(); ?>">
 </head>
 <body>
     <header>

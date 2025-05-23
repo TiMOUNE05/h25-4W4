@@ -156,7 +156,7 @@ Le composant .carte
 .recherche {
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   gap: 0rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -171,14 +171,19 @@ Le composant .carte
 .recherche__input:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-.recherche__img {
-  flex: 0 0 20px;
-  padding: 0 3px;
-}
-.recherche .recherche__input::placeholder {
+.recherche__input::placeholder {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   font-style: italic;
+}
+.recherche__img {
+  flex: 0 0 20px;
+  padding: 0 3px;
+  display: flex;
+  align-items: center;
+}
+.recherche__bouton {
+  display: block;
 }
 @media screen and (max-width: 800px) {
   .recherche {
@@ -189,36 +194,33 @@ Le composant .carte
 .erreur_recherche .recherche {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  outline: none;
   width: 20vh;
   margin-bottom: 5vh;
   border-bottom: 5px solid yellow;
 }
 .erreur_recherche .recherche__input {
   flex: 1;
-  border: none;
+  height: 3.5rem;
+  font-size: 1rem;
   color: yellow;
-  outline: none;
+  border: none;
   background-color: rgba(0, 0, 0, 0);
   border-right: 1px dotted rgba(0, 0, 0, 0);
 }
 .erreur_recherche .recherche__input:hover {
   background-color: rgba(0, 0, 0, 0);
 }
-.erreur_recherche .recherche__img {
-  display: none;
-  flex: 0 0 20px;
-  padding: 0 3px;
-}
-.erreur_recherche .recherche .recherche__bouton {
-  display: none;
-}
-.erreur_recherche .recherche .recherche__input::placeholder {
+.erreur_recherche .recherche__input::placeholder {
   font-family: "Arial", sans-serif;
   font-size: 2em;
   font-style: italic;
   color: yellow;
-  height: 5vh;
+}
+.erreur_recherche .recherche__img {
+  display: none;
+}
+.erreur_recherche .recherche__bouton {
+  display: none;
 }
 
 .erreur_titre {
@@ -333,8 +335,21 @@ Le composant .carte
 
 .vague {
   position: relative;
+  animation: bougerVague 8s ease-in-out infinite;
+  z-index: -1;
 }
 
+@keyframes bougerVague {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .icone_app {
   margin-top: 10px;
   display: flex;
@@ -637,4 +652,48 @@ form {
   100% {
     transform: translate(0, 0);
   }
+}
+.rest__api {
+  background-color: rgb(252, 185, 0);
+}
+
+.menu-pays {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pays__item {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pays__item.selected {
+  background-color: #0056b3;
+}
+
+.destination-item {
+  background-color: #e0f0ff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.TitreArticleCategorie {
+  cursor: pointer;
+}
+
+.descriptionArticleCategorie {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.descriptionArticleCategorie.open {
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */
